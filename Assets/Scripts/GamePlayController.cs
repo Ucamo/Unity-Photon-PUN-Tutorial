@@ -27,15 +27,4 @@ public class GamePlayController : MonoBehaviour
     void RPC_IncreaseNumber(){
         globalNumber++;
     }
-
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
-         if(stream.IsWriting) {
-             stream.SendNext(globalNumber);
-
-         }
-         else {
-             globalNumber = (int)stream.ReceiveNext();
-         }
-         
-     }
 }
