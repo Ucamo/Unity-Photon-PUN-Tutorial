@@ -6,6 +6,7 @@ using Photon.Realtime;
 
 public class Disconect : MonoBehaviour
 {
+    //Leave the room.
     public void DisconectButton(){
         PhotonNetwork.LeaveRoom();
     }
